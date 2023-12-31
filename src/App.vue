@@ -1,48 +1,36 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+  <header class="bg-blue-600">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos asperiores voluptate, mollitia hic accusantium eius doloremque facilis iusto possimus repellendus dolor voluptatum rem.</p>
   </header>
 
   <main>
-    <TheWelcome />
+    <div class="header">
+      <div class="left">
+        <span class="menu"></span>
+        <div class="select-wordspace">
+          <select>
+            <option>My Workspace</option>
+          </select>
+          <button class="blue">X</button>
+        </div>
+      </div>
+
+      <div class="right">
+        <div>
+          <input type="text">
+          <button>Search</button>
+        </div>
+        <span class="icons">Notifications</span>
+        <span class="icons">Issus</span>
+        <div class="user-welcome">
+          <span>Welcome Grace</span>
+          <span>Admin</span>
+        </div>
+
+      </div>
+    </div>
   </main>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    background-color:red;
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
