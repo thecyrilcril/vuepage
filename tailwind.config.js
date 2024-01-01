@@ -17,6 +17,7 @@ export default {
           'v-purple': '#2B2A3F',
           'v-link': '#A3AED0',
           'v-gray': '#f2f1f9',
+          'v-text-gray': '#384D67',
           'v-form-gray': '#f5f4fa',
           'v-icon-purple': '#A3AED0',
         },

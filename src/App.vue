@@ -1,14 +1,7 @@
 <script setup>
-import Dashboard from './components/icons/Dashboard.vue'
-import Projects from './components/icons/Projects.vue'
-import Scheduler from './components/icons/Scheduler.vue'
-import ContentWizard from './components/icons/ContentWizard.vue'
-import Documents from './components/icons/Documents.vue'
-import LogOut from './components/icons/LogOut.vue'
-import Union from './components/icons/Union.vue'
-import Hamburger from './components/icons/Hamburger.vue'
-import Notifications from './components/icons/Notifications.vue'
-import Issues from './components/icons/Issues.vue'
+import { ref } from 'vue'
+import { vOnClickOutside } from '@vueuse/components'
+const userMenu = ref(false)
 </script>
 
 <template>
@@ -22,7 +15,6 @@ import Issues from './components/icons/Issues.vue'
         </span>
         <span class="text-[1.68rem] font-bold text-white leading-[1.68rem] tracking-wide">WordPilot</span>
       </h1>
-      <!-- <hr class="mx-[2rem] mb-[2.56rem] mt-[2.93rem] border-[0.2px]"> -->
       <ul class="text-v-link space-y-2 pt-[2.93rem]">
         <li>
           <a href="#" class="group group flex space-x-3 rounded-[0.25rem] pl-[0.81rem] py-[0.69rem] h-[2.87rem] font-bold hover:bg-v-blue hover:text-white active:font-bold">
@@ -77,7 +69,7 @@ import Issues from './components/icons/Issues.vue'
           </div>
         </div>
 
-        <div class="flex space-x-6 items-center space-x-[5.25rem]">
+        <div class="flex space-x-6 items-center space-x-[5.25rem] relative">
           <div class="flex items-center space-x-8">
             <div class="flex items-center">
               <input type="text" class="border-0 bg-v-form-gray w-[13.75rem] h-10" placeholder="Search here">
@@ -93,12 +85,57 @@ import Issues from './components/icons/Issues.vue'
             <Issues class="h-5 w-5"/>
 
           </div>
-          <div class="mr-auto flex flex-col text-sm leading-4">
+          <a
+            @click="userMenu = ! userMenu"
+            v-on-click-outside="() => userMenu = false"
+            href="#"
+            class="mr-auto flex flex-col text-sm leading-4"
+          >
             <span class="font-medium">Welcome Grace</span>
             <span class="font-light">Admin</span>
+          </a>
+          <div v-show="userMenu" class="flex flex-col text-sm divide-y w-36 absolute top-10 right-0 bg-white rounded shadow">
+            <a href="#" class="py-3 px-3 text-gray-700">Profile</a>
+            <a href="#" class="py-3 px-3 text-gray-700">Support</a>
+            <a href="#" class="py-3 px-3 text-gray-700">Settings</a>
+            <a href="#" class="py-3 px-3 text-gray-700">Log Out</a>
           </div>
 
+        </div>
       </div>
+      <div class="flex justify-start items-center my-5">
+        <button class="px-5 py-3 mr-[15px] rounded-md bg-v-blue">
+          <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.32841 9.0001L9.6924 14.3641L8.2782 15.7783L0.500008 8.0001L8.27821 0.221999L9.6924 1.6362L4.32841 7.0001L16.5 7.0001L16.5 9.0001L4.32841 9.0001Z" fill="white"/>
+          </svg>
+        </button>
+        <p class="text-v-text-gray font-bold text-2xl">Write</p>
+      </div>
+      <div class="bg-white rounded-md pb-[3.87rem] w-[97.31rem] pl-[1.93rem] pt-[1.31rem] text-v-text-gray shadow-sm flex flex-col">
+        <h3 class="text-[1.06rem] font-bold mb-[1.18rem] leading-8">Header Setting</h3>
+        <div class="flex items-end space-x-4">
+          <div class="w-[70.75rem]">
+            <div class="flex justify-between">
+              <label for="keyword" class="mb-[0.62rem]">Main Keyword<span class="align-top text-red-500 leading-[1.62rem]">*</span></label>
+              <span>61/80</span>
+
+            </div>
+            <input id="keyword" type="text" class="w-full py-[0.75rem] rounded border-gray-200" placeholder="What do dermatologist prescribe for skin whitening?">
+
+          </div>
+          <button class="bg-v-blue w-[15.81rem] h-[3.12rem] py-[0.90rem] rounded text-white font-bold text-sm">Regenerate Title</button>
+        </div>
+        <div class="flex space-x-4 mt-[1.43rem]">
+          <div class="w-[70.75rem]">
+            <div class="flex justify-between">
+              <label for="keyword" class="mb-[0.62rem]">Title<span class="align-top text-red-500 leading-[1.62rem]">*</span></label>
+              <span>6/100</span>
+
+            </div>
+            <input id="keyword" type="text" class="w-full py-[0.75rem] rounded border-gray-200" placeholder="What do dermatologist prescribe for skin whitening? Discover Now!">
+
+          </div>
+        </div>
       </div>
     </main>
 

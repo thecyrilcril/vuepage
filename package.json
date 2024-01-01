@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource-variable/red-hat-display": "^5.0.19",
+    "@vueuse/components": "^10.7.1",
     "vue": "^3.3.11"
   },
   "devDependencies": {
