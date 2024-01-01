@@ -1,3 +1,19 @@
 @tailwind base;
+.scrollable::-webkit-scrollbar {
+  @apply w-2 px-2 h-1;
+}
+.scrollable::-webkit-scrollbar-track {
+  @apply bg-white/90 rounded-md px-2;
+}
+.scrollable::-webkit-scrollbar-thumb {
+  @apply w-2 bg-v-light-blue bg-opacity-70 rounded-md border border-slate-700;
+}
+
+@supports (scrollbar-color: red  blue) {
+  .scrollable {
+    scrollbar-color: #D3E7FF #e2e8f0;
+    scrollbar-width: thin;
+  }
+}
 @tailwind components;
 @tailwind utilities;
