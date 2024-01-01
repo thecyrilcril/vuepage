@@ -64,31 +64,95 @@ const userMenu = ref(false)
         </button>
         <p class="text-v-text-gray font-bold text-2xl">Write</p>
       </div>
-      <div class="bg-white rounded-md pb-[3.87rem] w-[97.31rem] pl-[1.93rem] pt-[1.31rem] text-v-text-gray shadow-sm flex flex-col">
-        <h3 class="text-[1.06rem] font-bold mb-[1.18rem] leading-8">Header Setting</h3>
-        <div class="flex items-end space-x-4">
-          <div class="w-[70.75rem]">
-            <div class="flex justify-between">
-              <label for="keyword" class="mb-[0.62rem]">Main Keyword<span class="align-top text-red-500 leading-[1.62rem]">*</span></label>
-              <span>61/80</span>
+      <div class="overflow-y-scroll h-[75vh] scrollable">
+        <div class="bg-white rounded-md pb-[3.87rem] w-[95.38rem] pl-[1.93rem] pt-[1.31rem] text-v-text-gray shadow-lg flex flex-col">
+          <h3 class="text-[1.06rem] font-bold mb-[1.18rem] leading-8">Header Setting</h3>
+          <div class="flex items-end space-x-4">
+            <div class="w-[70.75rem]">
+              <div class="flex justify-between">
+                <label for="keyword" class="mb-[0.62rem]">Main Keyword<span class="align-top text-red-500 leading-[1.62rem]">*</span></label>
+                <span>61/80</span>
+
+              </div>
+              <input id="keyword" type="text" class="w-full py-[0.75rem] rounded border-gray-200" placeholder="What do dermatologist prescribe for skin whitening?">
 
             </div>
-            <input id="keyword" type="text" class="w-full py-[0.75rem] rounded border-gray-200" placeholder="What do dermatologist prescribe for skin whitening?">
-
+            <button class="bg-v-blue w-[15.81rem] h-[3.12rem] py-[0.90rem] rounded text-white font-bold text-sm">Regenerate Title</button>
           </div>
-          <button class="bg-v-blue w-[15.81rem] h-[3.12rem] py-[0.90rem] rounded text-white font-bold text-sm">Regenerate Title</button>
-        </div>
-        <div class="flex space-x-4 mt-[1.43rem]">
-          <div class="w-[70.75rem]">
-            <div class="flex justify-between">
-              <label for="keyword" class="mb-[0.62rem]">Title<span class="align-top text-red-500 leading-[1.62rem]">*</span></label>
-              <span>6/100</span>
+          <div class="flex space-x-4 mt-[1.43rem]">
+            <div class="w-[70.75rem]">
+              <div class="flex justify-between">
+                <label for="keyword" class="mb-[0.62rem]">Title<span class="align-top text-red-500 leading-[1.62rem]">*</span></label>
+                <span>6/100</span>
+
+              </div>
+              <input id="keyword" type="text" class="w-full py-[0.75rem] rounded border-gray-200" placeholder="What do dermatologist prescribe for skin whitening? Discover Now!">
 
             </div>
-            <input id="keyword" type="text" class="w-full py-[0.75rem] rounded border-gray-200" placeholder="What do dermatologist prescribe for skin whitening? Discover Now!">
-
           </div>
         </div>
+        <div class="">
+          <h3 class="text-[1.06rem] font-bold leading-8 mt-[2.06rem] mb-[1.75rem] text-v-text-gray">Core Settings</h3>
+          <div class="flex space-x-[94px]">
+            <div class="w-[31rem] space-y-[17px]">
+              <div class="flex flex-col space-y-[0.5rem]">
+                <label for="language" class="mb">Language</label>
+                <select id="language" class="rounded border-gray-200 py-[0.75rem]">
+                    <option value="" selected>English(US)</option>
+                </select>
+              </div>
+              <div class="flex flex-col space-y-[0.5rem]">
+                <label for="tone" class="mb">Tone of Voice</label>
+                <select id="tone" class="rounded border-gray-200 py-[0.75rem]">
+                    <option value="" selected>Friendly</option>
+                </select>
+              </div>
+              <div class="flex flex-col space-y-[0.5rem]">
+                <label for="pov" class="mb">Point of View</label>
+                <select id="pov" class="rounded border-gray-200 py-[0.75rem]">
+                    <option value="" selected>None</option>
+                </select>
+              </div>
+              <div class="flex flex-col space-y-[0.5rem]">
+                <label for="target_country" class="mb">Target Country</label>
+                <select id="target_country" class="rounded border-gray-200 py-[0.75rem]">
+                    <option value="" selected>None</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex flex-col w-[550px]">
+              <div class="flex flex-col space-y-[0.5rem]">
+                <label for="size" class="mb">Actual Size</label>
+                <div class="grid grid-cols-2 space-x-4">
+                  <select id="size" class="rounded border-gray-200 py-[0.75rem]">
+                      <option value="" selected>X-small</option>
+                  </select>
+                  <span class="text-[0.81rem] py-4 bg-v-light-blue rounded text-center">
+                    2400-3600 words, 9-12 H2 headings
+                  </span>
+                </div>
+              </div>
+              <div class="leading-[20px] text-[13px] w-[510px] mt-[23px] mb-[18px]">The X-Small article offers short articles or news, ideal for quick updates and capturing immediate interest, ensuring your content remains fresh and timely in the eyes of your audiences.</div>
+              <div class="flex text-[15px]">
+                <div class="flex items-center space-x-1">
+                  <span>Details to Include</span>
+                  <Issues class="w-6 h-6" />
+                </div>
+                <ul class="flex divide-x divide-v-link ml-[40px]">
+                  <li><a href="#" class="text-v-link px-3">Sample 1</a></li>
+                  <li><a href="#" class="text-v-link px-3">Sample 2</a></li>
+                  <li><a href="#" class="text-v-link px-3">Sample 3</a></li>
+                </ul>
+              </div>
+              <div class="mt-[16px] text-[15px] flex space-x-1 items-center leading-[26px]">
+                <input type="checkbox" class="rounded">
+                <span>Intense mode: to each section, beyond just the entire article.</span>
+              </div>
+              <textarea rows="3" placeholder="e.g. phone number as 267-229-6783" class="mt-[19px] border-gray-200 w-full rounded"></textarea>
+            </div>
+          </div>
+        </div>
+
       </div>
     </main>
 
