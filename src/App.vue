@@ -9,7 +9,7 @@ const userMenu = ref(false)
   <div class="grid grid-cols-[18.12rem_1fr] h-screen bg-v-gray">
     <Navigation />
     <main class="px-[1.62rem] pt-[1.75rem] pb-[1.93rem]">
-      <div class="header bg-white rounded-[0.25rem] px-6 py-[18px] flex justify-between">
+      <div class="header bg-white rounded-[0.25rem] px-6 py-[1.12rem] flex justify-between">
         <div class="flex space-x-6 items-center">
           <Hamburger class="w-6 h-6" />
           <div class="flex">
@@ -57,7 +57,7 @@ const userMenu = ref(false)
         </div>
       </div>
       <div class="flex justify-start items-center my-5">
-        <button class="px-5 py-3 mr-[15px] rounded-md bg-v-blue">
+        <button class="px-5 py-3 mr-[0.93rem] rounded-md bg-v-blue">
           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.32841 9.0001L9.6924 14.3641L8.2782 15.7783L0.500008 8.0001L8.27821 0.221999L9.6924 1.6362L4.32841 7.0001L16.5 7.0001L16.5 9.0001L4.32841 9.0001Z" fill="white"/>
           </svg>
@@ -93,8 +93,8 @@ const userMenu = ref(false)
         </div>
         <div class="">
           <h3 class="text-[1.06rem] font-bold leading-8 mt-[2.06rem] mb-[1.75rem] text-v-text-gray">Core Settings</h3>
-          <div class="flex space-x-[94px]">
-            <div class="w-[31rem] space-y-[17px]">
+          <div class="flex space-x-[5.87rem]">
+            <div class="w-[31rem] space-y-[1.06rem]">
               <div class="flex flex-col space-y-[0.5rem]">
                 <label for="language" class="mb">Language</label>
                 <select id="language" class="rounded border-gray-200 py-[0.75rem]">
@@ -120,7 +120,7 @@ const userMenu = ref(false)
                 </select>
               </div>
             </div>
-            <div class="flex flex-col w-[550px]">
+            <div class="flex flex-col w-[34.37rem]">
               <div class="flex flex-col space-y-[0.5rem]">
                 <label for="size" class="mb">Actual Size</label>
                 <div class="grid grid-cols-2 space-x-4">
@@ -132,23 +132,23 @@ const userMenu = ref(false)
                   </span>
                 </div>
               </div>
-              <div class="leading-[20px] text-[13px] w-[510px] mt-[23px] mb-[18px]">The X-Small article offers short articles or news, ideal for quick updates and capturing immediate interest, ensuring your content remains fresh and timely in the eyes of your audiences.</div>
-              <div class="flex text-[15px]">
+              <div class="leading-[1.25rem] text-[0.81rem] w-[31.87rem] mt-[1.43rem] mb-[1.12rem]">The X-Small article offers short articles or news, ideal for quick updates and capturing immediate interest, ensuring your content remains fresh and timely in the eyes of your audiences.</div>
+              <div class="flex text-[0.93rem]">
                 <div class="flex items-center space-x-1">
                   <span>Details to Include</span>
                   <Issues class="w-6 h-6" />
                 </div>
-                <ul class="flex divide-x divide-v-link ml-[40px]">
+                <ul class="flex divide-x divide-v-link ml-[2.5rem]">
                   <li><a href="#" class="text-v-link px-3">Sample 1</a></li>
                   <li><a href="#" class="text-v-link px-3">Sample 2</a></li>
                   <li><a href="#" class="text-v-link px-3">Sample 3</a></li>
                 </ul>
               </div>
-              <div class="mt-[16px] text-[15px] flex space-x-1 items-center leading-[26px]">
+              <div class="mt-[1rem] text-[0.93] flex space-x-2 items-center leading-[1.62rem]">
                 <input type="checkbox" class="rounded">
                 <span>Intense mode: to each section, beyond just the entire article.</span>
               </div>
-              <textarea rows="3" placeholder="e.g. phone number as 267-229-6783" class="mt-[19px] border-gray-200 w-full rounded"></textarea>
+              <textarea rows="3" placeholder="e.g. phone number as 267-229-6783" class="mt-[1.18rem] border-gray-200 w-full rounded"></textarea>
             </div>
           </div>
         </div>
